@@ -26,15 +26,31 @@ function restar(numero1, numero2) {
     return numero1 - numero2;
 }
 
-const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
+function dividir(numero1, numero2) {
+    return numero1 / numero2;
+}
+
+function multiplicar(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+const operador = prompt('Ingrese + - * /');
+const numero1 = Number(prompt('Ingrese el primer número'));
+const numero2 = Number(prompt('Ingrese el segundo número'));
 
 let resultado;
+
 if (operador === '+') {
     resultado = sumar(numero1, numero2);
-} else {
+} else if (operador === '-') {
     resultado = restar(numero1, numero2);
+}  else if (operador === '*') {
+    resultado = multiplicar(numero1, numero2);
+} else if (operador === '/') {
+    resultado = dividir(numero1, numero2);
+} 
+else {
+    resultado = 'Operador no desconocido';
 }
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
